@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view"
+
+    >
+
+    <group
+         android:checkableBehavior="single"
+         android:background="@color/gray"
+        >
+
+           <item
+                android:id="@+id/home"
+               android:title=" Home "
+               android:icon="@drawable/ic_home"
+               android:iconTint="@color/purple"/>
+
+        <item
+            android:id="@+id/fav"
+            android:title="@string/fav"
+            android:icon="@drawable/ic_favorite_on_red"
+            android:iconTint="#D51020"
+            />
+        <item
+            android:id="@+id/settings"
+            android:icon="@drawable/ic_setting_24"
+            android:title="@string/s"
+            android:iconTint="#187ED8"
+
+            />
+
+        <item
+            android:id="@+id/archive"
+            android:title="@string/arch"
+            android:icon="@drawable/ic_archive_yellow"
+            android:iconTint="#DAD715"
+            />
+
+    </group>
+
+</menu>

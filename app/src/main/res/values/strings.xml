@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Note</string>
+    <string name="MianActivity_title">  Keep\nOn\nNote...!!  </string>
+    <string name="s">Setting</string>
+    <string name="fav">Favorites</string>
+    <string name="arch">Archive</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="et_note">write some thing ....</string>
+    <string name="title">Title</string>
+    <string name="labol_2">what do you think of .... ?</string>
+    <string name="back_button">Back Button</string>
+    <string name="favorite_button">Favorite Button</string>
+    <string name="write_some_thing">write some thing ....</string>
+    <string name="title2">Title</string>
+    <string name="lebol">what do you think of .... ?</string>
+    <string name="back_button2">Back Button</string>
+    <string name="keep_on_note">Keep On Note ...!</string>
+</resources>

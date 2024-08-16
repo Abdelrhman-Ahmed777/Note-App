@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Note" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+         <item name="colorPrimary">#795DEA</item>
+        <item name="colorPrimaryVariant">#7056DA</item>
+        <item name="android:statusBarColor">#7056DA</item>
+   </style>
+
+    <style name="AppTheme.NavigationViewStyle" parent="Widget.MaterialComponents.NavigationView">
+        <item name="colorOnSurface">@color/gray</item>
+    </style>
+</resources>
