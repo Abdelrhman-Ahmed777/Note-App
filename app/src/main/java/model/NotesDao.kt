@@ -1,4 +1,4 @@
 package model
 
-class NotesDao {
+interface NotesDao {
 }
