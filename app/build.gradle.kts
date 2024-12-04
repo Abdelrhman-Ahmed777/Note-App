@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("com.google.devtools.ksp")
+    id("kotlin-parcelize")
 
 }
 
@@ -32,12 +33,12 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_18
+        targetCompatibility = JavaVersion.VERSION_18
 
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "18"
 
     }
 }
@@ -45,37 +46,56 @@ android {
 dependencies {
 
     implementation(libs.androidx.core.ktx)
+
     implementation(libs.androidx.appcompat)
+
     implementation(libs.material)
+
     implementation(libs.androidx.activity)
+
     implementation(libs.androidx.constraintlayout)
+
     implementation(libs.support.annotations)
+
     testImplementation(libs.junit)
+
     androidTestImplementation(libs.androidx.junit)
+
     androidTestImplementation(libs.androidx.espresso.core)
+
     implementation(libs.androidx.recyclerview)
+
     implementation(libs.androidx.cardview)
+
     implementation(libs.material)
+
     implementation(libs.androidx.appcompat)
 
-    implementation("androidx.appcompat:appcompat-resources:1.7.0") // Check for the latest version
+    implementation(libs.androidx.appcompat.resources) // Check for the latest version
 
+    implementation(libs.material)
 
-    val room_version = "2.6.1"
+    implementation(libs.androidx.room.runtime)
 
-    implementation("androidx.room:room-runtime:$room_version")
+    implementation(libs.material)
 
-    ksp("androidx.room:room-compiler:$room_version")       // To use Kotlin Symbol Processing (KSP)
+    ksp(libs.androidx.room.compiler)       // To use Kotlin Symbol Processing (KSP)
 
-    implementation("androidx.room:room-ktx:$room_version")    // optional - Kotlin Extensions and Coroutines support for Room
+    implementation(libs.androidx.room.ktx)    // optional - Kotlin Extensions and Coroutines support for Room
 
-    implementation("androidx.room:room-rxjava2:$room_version")    // optional - RxJava2 support for Room
+    implementation(libs.androidx.room.rxjava2)    // optional - RxJava2 support for Room
 
-    implementation("androidx.room:room-rxjava3:$room_version")    // optional - RxJava3 support for Room
+    implementation(libs.androidx.room.rxjava3)    // optional - RxJava3 support for Room
 
-    implementation("androidx.room:room-guava:$room_version")    // optional - Guava support for Room, including Optional and ListenableFuture
+    implementation(libs.androidx.room.guava)    // optional - Guava support for Room, including Optional and ListenableFuture
 
-    testImplementation("androidx.room:room-testing:$room_version")     // optional - Test helpers
+    testImplementation(libs.androidx.room.testing)     // optional - Test helpers
 
-    implementation("androidx.room:room-paging:$room_version")     // optional - Paging 3 Integration
+    implementation(libs.androidx.room.paging)     // optional - Paging 3 Integration
+
+    implementation(libs.kotlinx.coroutines.android)    // optional - Kotlin Coroutines for Android
+
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
 }
+
+

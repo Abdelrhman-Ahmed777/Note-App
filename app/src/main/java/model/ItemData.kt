@@ -1,14 +1,19 @@
 package model
 
-import android.os.Parcel
 import android.os.Parcelable
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import kotlinx.parcelize.Parcelize
 
 
-
- data class ItemData(
-   val id : Int ,
-   val title : String? ,
-   val note : String? ,
-   var isFav : Boolean? ,
-   var isArchive : Boolean?
-)
+@Entity(tableName = "note_table")
+@Parcelize
+data class ItemData(
+    @PrimaryKey(autoGenerate = true) val noteId: Int ,
+    @ColumnInfo(name = "titles") var title: String? ,
+    @ColumnInfo(name = "content") var content: String? ,
+    @ColumnInfo(name = "date") var date: String,
+    @ColumnInfo(name = "favorite items") var isFav: Boolean = false ,
+    @ColumnInfo(name = "archived items") var isArchive: Boolean = false
+) : Parcelable

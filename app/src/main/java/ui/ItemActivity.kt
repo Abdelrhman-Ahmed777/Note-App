@@ -27,7 +27,7 @@ class ItemActivity : AppCompatActivity() {
             insets
         }
 
-
+      //  bindingitem.ivDeleteItem.scrollingText.isSelected = true
 
     }
 }

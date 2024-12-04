@@ -5,20 +5,20 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray"
+    android:background="@color/main_background"
     tools:context="ui.MainActivity2">
 
     <ImageButton
         android:id="@+id/iv_archive_button"
         android:layout_width="49dp"
         android:layout_height="49dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/main_background"
         android:clickable="true"
         android:focusable="true"
-        android:backgroundTint="@color/gray"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
-        android:src="@drawable/ic_archive_off"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_archive_yellow"
+        app:layout_constraintEnd_toStartOf="@+id/iv_done"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ContentDescription" />
 
@@ -26,7 +26,7 @@
         android:id="@+id/iv_fav"
         android:layout_width="49dp"
         android:layout_height="49dp"
-        android:backgroundTint="@color/gray"
+        android:backgroundTint="@color/main_background"
         android:clickable="true"
         android:contentDescription="@string/favorite_button"
         android:focusable="true"
@@ -37,12 +37,26 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
+        android:id="@+id/iv_done"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/main_background"
+        android:clickable="true"
+        android:contentDescription="@string/favorite_button"
+        android:focusable="true"
+        android:src="@drawable/ic_check"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
         android:id="@+id/iv_back_button"
         android:layout_width="49dp"
         android:layout_height="49dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
-        android:backgroundTint="@color/gray"
+        android:backgroundTint="@color/main_background"
         android:contentDescription="@string/back_button"
         android:src="@drawable/ic_arrow_back"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,8 +67,9 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="24dp"
         android:elevation="20dp"
         android:fontFamily="@font/slkscrb"
         android:shadowColor="#F8F4F4"
@@ -62,8 +77,9 @@
         android:shadowDy="2"
         android:text="@string/lebol"
         android:textColor="#9584DC"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_back_button" />
 
@@ -75,13 +91,14 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
         android:hint="@string/title2"
+        android:background="@drawable/edit_text_background"
         android:importantForAutofill="no"
         android:inputType="text"
         android:lines="1"
         android:textColor="#A3A5A5"
         android:textColorHint="#555757"
-        android:textSize="40sp"
-        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -94,6 +111,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
+        android:background="@drawable/edit_text_background"
         android:gravity="top"
         android:hint="@string/write_some_thing"
         android:importantForAutofill="no"
@@ -101,11 +119,21 @@
         android:textColor="#A3A5A5"
         android:textColorHint="#555757"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_title"
-        app:layout_constraintVertical_bias="0.029" />
+        app:layout_constraintTop_toBottomOf="@+id/et_title" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

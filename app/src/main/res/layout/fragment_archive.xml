@@ -4,21 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ui.ArchiveFragment">
+    tools:context=".fragment.ArchiveFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/gray"
+        android:background="@color/main_background"
         tools:context=".FavActivity">
 
-        <ImageView
+
+
+        <ImageButton
             android:id="@+id/iv_back_button_archFragmant"
             android:layout_width="34dp"
             android:layout_height="34dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
+            android:background="@color/main_background"
             android:src="@drawable/ic_arrow_back"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -35,7 +38,7 @@
             android:shadowDx="2"
             android:shadowDy="2"
             android:text="Archive ...."
-            android:textColor="#795DEA"
+            android:textColor="#9584DC"
             android:textSize="30sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/iv_back_button_archFragmant" />
